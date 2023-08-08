@@ -48,7 +48,8 @@
 		"TEST3": {
 			"icon":"lock"
 		}
-	}
+	},
+	"liveServer.settings.multiRootWorkspaceName": "openai-quickstart-python"
 },
 	"launch": {
 		"version": "0.2.0",

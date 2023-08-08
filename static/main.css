@@ -21,10 +21,10 @@ input {
   font-family: "ColfaxAI", Helvetica, sans-serif;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ 
+  align-items: normal;
   padding-top: 60px;
+  background: #64996f;
 }
 .icon {
   width: 34px;
@@ -33,7 +33,7 @@ h3 {
   font-size: 32px;
   line-height: 40px;
   font-weight: bold;
-  color: #202123;
+  color: #284785;
   margin: 16px 0 40px;
 }
 form {
@@ -63,4 +63,11 @@ input[type="submit"] {
 .result {
   font-weight: bold;
   margin-top: 40px;
+  background-color: aqua;
+  background: #284785;
+}
+.test
+{
+  background-color: beige;
+
 }

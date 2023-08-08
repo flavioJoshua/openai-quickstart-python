@@ -35,4 +35,9 @@ Names:""".format(
     )
 
 
+@app.route('/seconda_pagina')
+def seconda_pagina():
+    return render_template('seconda.html')
+
+
 #TODO  test  di  funzionamento
