@@ -1,0 +1,66 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../Dir-test"
+			
+			
+		},
+		{
+			"path": "../Dir-test2"
+		}
+	],
+	"settings": {"todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "testtag-todo",
+        "flavioTag",
+        "TEST3"
+	],
+	"todo-tree.highlights.customHighlight": {
+
+
+		"BUG": {
+			"icon": "bug"
+		},
+		"HACK": {
+			"icon": "tools"
+		},
+		"FIXME": {
+			"icon": "flame"
+		},
+		"XXX": {
+			"icon": "x"
+		},
+		"[ ]": {
+			"icon": "issue-draft"
+		},
+		"[x]": {
+			"icon": "issue-closed"
+		},
+		"TEST3": {
+			"icon":"lock"
+		}
+	}
+},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [{
+			"name": "Python: Remote Attach workspace",
+			"type": "python",
+			"request": "attach",
+			"connect": { "host": "localhost", "port": 5678 },
+			"pathMappings": [
+			  { "localRoot": "${workspaceFolder}", "remoteRoot": "." }
+			],
+			"justMyCode": true
+		  }]
+	}
+}
