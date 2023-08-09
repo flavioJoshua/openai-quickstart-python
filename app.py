@@ -49,9 +49,12 @@ Names:""".format(
     )
 
 
-@app.route('/seconda_pagina' )
+@app.route('/seconda_pagina_url', methods=['GET', 'POST'])
 def seconda_pagina():
-    return render_template('seconda.html')
-
-
-#TODO  test  di  funzionamento
+    if request.method == 'GET':
+        print('seconda pagina Get')
+        return render_template('seconda.html')
+    elif request.method == 'POST':
+        _args = request.args
+        print("seconda pagina Post :", _args)
+        return redirect(url_for('seconda_pagina'), **_args)

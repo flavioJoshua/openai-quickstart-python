@@ -7,7 +7,10 @@
 <body>
     <h1>Benvenuto nella seconda pagina!</h1>
     <form action="{{ url_for('test_post.execute_function') }}" method="post">
-        <button type="submit">Esegui Funzione</button>
+        <button type="submit">Esegui Funzione su altra  pagina </button>
+    </form>
+    <form action="{{ url_for('seconda_pagina') }}" method="post">
+        <button type="submit">Esegui Funzione su stessa  pagina </button>
     </form>
 </body>
 </html>
