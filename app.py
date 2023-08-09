@@ -2,10 +2,20 @@ import os
 
 import openai
 from flask import Flask, redirect, render_template, request, url_for,session
+from utenti  import utenti_Blueprint
+
+
+
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 app.secret_key="oooo difficilissima "
+
+""" register  del bluePrint"""
+app.register_blueprint(utenti_Blueprint,url_prefix="/profilo" )
+
+
+
 
 @app.route("/", methods=("GET", "POST"))
 def index():
