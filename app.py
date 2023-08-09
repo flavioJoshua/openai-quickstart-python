@@ -3,6 +3,7 @@ import os
 import openai
 from flask import Flask, redirect, render_template, request, url_for,session
 from utenti  import utenti_Blueprint
+from test_post_btn  import post_Blueprint
 
 
 
@@ -13,6 +14,8 @@ app.secret_key="oooo difficilissima "
 
 """ register  del bluePrint"""
 app.register_blueprint(utenti_Blueprint,url_prefix="/profilo" )
+app.register_blueprint(post_Blueprint,url_prefix="/post_btn")
+
 
 
 
