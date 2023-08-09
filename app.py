@@ -1,11 +1,11 @@
 import os
 
 import openai
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, url_for,session
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
-
+app.secret_key="oooo difficilissima "
 
 @app.route("/", methods=("GET", "POST"))
 def index():
@@ -19,7 +19,8 @@ def index():
         return redirect(url_for("index", result=response.choices[0].text))
 
     result = request.args.get("result")
-    return render_template("index.html", result=result)
+    
+    return render_template("index.html",_valore="qualcosa da  scrivere" ,result=result)
 
 
 def generate_prompt(animal):
@@ -35,7 +36,7 @@ Names:""".format(
     )
 
 
-@app.route('/seconda_pagina')
+@app.route('/seconda_pagina' )
 def seconda_pagina():
     return render_template('seconda.html')
 

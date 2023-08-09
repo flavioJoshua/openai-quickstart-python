@@ -16,7 +16,9 @@
     <input type="submit" value="Generate names" />
   </form>
   {% if result %}
-  <div class="result">{{ result }}</div>
+  <div class="result">{{ result | title|  replace  (","," -- ") }}</div>
+  {% else  %}
+<strong>{{  _valore  }}</strong>
   {% endif %}
   <div  > 
     <a herf=""  ></a>
